@@ -1,0 +1,41 @@
+.about-section {
+  color: #f9f9f9;
+  background-color: #333;
+  padding: 80px 0; /* Adjust the padding for more space around the content */
+}
+
+.about-section img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid #4caf50; /* Green border */
+  border-radius: 50%; /* Circular border */
+  margin-bottom: 20px; /* Add space below image */
+}
+
+.about-section h2 {
+  color: #32cd32; /* Matching green color for the header */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  /* On smaller screens (mobile and tablets), adjust image size */
+  .about-section img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem; /* Reduce heading size for smaller screens */
+  }
+
+  .about-section p {
+    font-size: 1rem; /* Slightly smaller text */
+  }
+}

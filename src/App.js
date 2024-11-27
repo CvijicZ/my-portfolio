@@ -1,12 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Header from "./components/Header"; // Assuming Header has the navigation and scroll functionality
+import About from "./pages/About"; // The About section will just be a regular component
+import Projects from "./pages/Projects"; 
+import Navbar from "./components/Navbar";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function App() {
+
+const App = () => {
+  useEffect(() => {
+
+    document.body.style.backgroundColor = "#292b2c"; 
+
+  });
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <>
+     <Navbar />
+      <Header />
+      <About />
+      <Projects /> 
+      <Contact />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
