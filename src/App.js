@@ -12,6 +12,7 @@ const App = () => {
   useEffect(() => {
 
     document.body.style.backgroundColor = "#292b2c"; 
+    document.title="Portfolio | Zoran Cvijic"
 
   });
   return (
