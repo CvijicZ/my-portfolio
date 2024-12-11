@@ -20,7 +20,7 @@ const Navbar = () => {
       const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
         toggle: false
       });
-      bsCollapse.hide(); // Hide the navbar
+      bsCollapse.hide();
     }
   };
 

@@ -11,15 +11,17 @@ const Projects = () => {
       otherTech: "AJAX, JWT, WebSockets",
       videoUrl: "https://www.youtube.com/embed/K6wfZpwQkQA",
       promote: true,
+      githubLink: "https://github.com/CvijicZ/friendflow",
     },
     {
-      title: "Project 2",
+      title: "Mini-Igre",
       description:
-        "Project 2 is a web application built with Angular and PHP for backend. It handles ABC.",
-      frontendTech: "Angular, Bootstrap",
+        "Mini-Igre is a web platform that allows users to play games, customize their accounts, and connect with others through an interactive forum.",
+      frontendTech: "HTML, CSS, JavaScript",
       backendTech: "PHP, MySQL",
-      videoUrl: "https://www.youtube.com/embed/your-video-id-2",
+      videoUrl: "https://www.youtube.com/embed/96pI_-j0Iss",
       promote: false,
+      githubLink: "https://github.com/CvijicZ/mini-igre",
     },
   ];
 
@@ -37,9 +39,7 @@ const Projects = () => {
               key={index}
             >
               <div
-                className={`card bg-secondary text-light h-100 shadow ${
-                  project.promote ? "blink-border" : ""
-                }`}
+                className={`card bg-secondary text-light h-100 shadow ${project.promote ? "blink-border" : ""}`}
               >
                 <div className="card-body">
                   <h5 className="card-title text-warning">{project.title}</h5>
@@ -69,6 +69,16 @@ const Projects = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
+                  <div className="mt-3 text-center">
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-dark btn-sm text-warning"
+                    >
+                      View Source Code on GitHub
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
