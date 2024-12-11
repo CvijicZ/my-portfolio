@@ -9,7 +9,7 @@ const About = () => {
           {/* Image Section */}
           <div className="col-md-4 text-center">
             <img
-              src={`${process.env.PUBLIC_URL}/images/my-image.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/a.png`}
               alt="Your Name"
               className="rounded-circle img-fluid shadow"
             />
