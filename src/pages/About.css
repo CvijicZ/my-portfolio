@@ -43,10 +43,8 @@
 }
 
 .about-section .skill-item {
-  background-color: #212529;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .about-section .languages-list {
@@ -67,7 +65,33 @@
   .about-section .container {
     padding: 0 15px;
   }
+
   .about-section img.about-img {
     max-width: 150px;
   }
+}
+
+.flag-icon {
+  width: 30px;
+  height: auto;
+
+  vertical-align: middle;
+}
+
+.skill-item h5,
+.skill-item p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.skill-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.skill-item h5,
+.skill-item p {
+  z-index: 15;
 }

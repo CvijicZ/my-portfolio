@@ -94,40 +94,75 @@ const About = () => {
           <div className="col-md-12">
             <h3 className="text-warning">Skills & Expertise</h3>
             <div className="skills-grid">
-              <div className="skill-item">
-                <h5 className="text-light">Frontend</h5>
-                <p className="text-light">HTML5, CSS3, JavaScript, jQuery, React, Bootstrap</p>
+              <div className="skill-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/wall-painting.png)` }}>
+
+                <h5 className="text-light fs-3">Frontend</h5>
+                <p className="text-dark fs-4">
+                  <span className="text-warning">HTML5</span>, <span className="text-danger">CSS3</span>, <span className="text-info">JavaScript</span>,
+                  <span className="text-primary"> jQuery</span>, <span className="text-warning">React</span>, <span className="text-info">Bootstrap</span>
+                </p>
               </div>
-              <div className="skill-item">
-                <h5 className="text-light">Backend</h5>
-                <p className="text-light">PHP, MySQL</p>
+              <div className="skill-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/terminal.jpg)` }}>
+
+                <h5 className="text-light fs-3">Backend</h5>
+                <p className="text-light fs-3">PHP, MySQL</p>
               </div>
-              <div className="skill-item">
-                <h5 className="text-light">Frameworks</h5>
-                <p className="text-light">Laravel, React</p>
+              <div className="skill-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/cranes.png)` }}>
+
+                <h5 className="text-light fs-3">Frameworks</h5>
+                <p className="text-light fs-3">Laravel, React</p>
               </div>
-              <div className="skill-item">
-                <h5 className="text-light">Tools</h5>
-                <p className="text-light">Git, Docker, Apache</p>
+              <div className="skill-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/toolbox.png)` }}>
+
+                <h5 className="text-light fs-3">Tools</h5>
+                <p className="text-light fs-4">Git, Docker, Apache</p>
               </div>
-              <div className="skill-item">
-                <h5 className="text-light">Soft skills</h5>
-                <p className="text-light">Team work, logical thinking, problem solving</p>
+              <div className="skill-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/teddy.png)` }}>
+
+                <h5 className="text-light fs-3">Soft Skills</h5>
+                <p className="text-light fs-4">Team work, logical thinking, problem solving</p>
               </div>
             </div>
           </div>
         </div>
 
+
         {/* Languages Section */}
         <div className="row mt-5">
           <div className="col-md-12">
-            <h3 className="text-warning">Languages</h3>
-            <ul className="languages-list text-light">
-              <li><strong>English:</strong> Professional working proficiency</li>
-              <li><strong>Serbian:</strong> Native speaker</li>
-            </ul>
+            <h3 className="text-warning mb-4">Languages</h3>
+            <div className="card bg-dark text-light">
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-12 col-md-6 mb-3">
+                    <h5 className="d-flex align-items-center">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/uk-flag.jpg`}
+                        alt="UK flag"
+                        className="flag-icon me-3"
+                      />
+                      <span>English</span>
+                    </h5>
+                    <p className="mb-0">Level: Professional working proficiency</p>
+                  </div>
+                  <div className="col-12 col-md-6 mb-3">
+                    <h5 className="d-flex align-items-center">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/srb-flag.png`}
+                        alt="Serbian flag"
+                        className="flag-icon me-3"
+                      />
+                      <span>Serbian</span>
+                    </h5>
+                    <p className="mb-0">Level: Native speaker</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+
       </div>
     </section>
   );
