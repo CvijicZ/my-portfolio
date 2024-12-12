@@ -1,35 +1,45 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const navbarCollapseRef = useRef(null);
+  const [offset, setOffset] = useState(0);
+  const navbarRef = useRef(null);
+
+  const updateOffset = () => {
+    if (navbarRef.current) {
+      setOffset(navbarRef.current.offsetHeight);
+    }
+  };
 
   useEffect(() => {
-    const navbarCollapse = navbarCollapseRef.current;
-    if (navbarCollapse) {
-      new window.bootstrap.Collapse(navbarCollapse);
-    }
+    updateOffset();
+    window.addEventListener("resize", updateOffset);
+
+    return () => {
+      window.removeEventListener("resize", updateOffset);
+    };
   }, []);
 
   const closeNavbar = () => {
-    const navbarCollapse = navbarCollapseRef.current;
-    if (navbarCollapse) {
-      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
-        toggle: false
-      });
-      bsCollapse.hide();
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.remove("show");
     }
   };
 
   return (
-    <nav className="navbar sticky-top navbar-expand-lg custom-navbar-color">
+    <nav className="navbar sticky-top navbar-expand-lg custom-navbar-color" ref={navbarRef}>
       <div className="container-fluid">
         {/* Logo section */}
         <span className="navbar-text text-light d-flex align-items-center">
           Made with React&nbsp;
-          <i className="fab fa-react" style={{ color: '#61dafb', fontSize: '1.5rem', fontWeight: 'bold' }}></i>
+          <i
+            className="fab fa-react"
+            style={{ color: "#61dafb", fontSize: "1.5rem", fontWeight: "bold" }}
+          ></i>
         </span>
+
         {/* Navbar toggler */}
         <button
           className="navbar-toggler"
@@ -42,6 +52,7 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         {/* Centered Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
@@ -52,7 +63,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={300}
                 spy={true}
-                offset={-80}
+                offset={-offset}
                 onClick={closeNavbar}
               >
                 Home
@@ -65,7 +76,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={300}
                 spy={true}
-                offset={-70}
+                offset={-offset}
                 onClick={closeNavbar}
               >
                 About
@@ -78,7 +89,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={300}
                 spy={true}
-                offset={-70}
+                offset={-offset}
                 onClick={closeNavbar}
               >
                 Projects
@@ -91,7 +102,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={300}
                 spy={true}
-                offset={-70}
+                offset={-offset}
                 onClick={closeNavbar}
               >
                 Contact
