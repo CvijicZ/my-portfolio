@@ -23,14 +23,17 @@
   
   /* Header content styling */
   .header-content {
-    z-index: 2;
+    z-index: 10;
     max-width: 80%;
+    
   }
   
   .header-title {
     font-size: 3rem;
     font-weight: bold;
     margin: 0;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(47, 122, 4, 0.5);
   }
   
   .header-subtitle {
@@ -113,4 +116,3 @@
       font-size: 1.2rem;
     }
   }
-  

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css";
+import { Link } from "react-scroll";
+
 
 const Header = () => {
   useEffect(() => {
@@ -86,15 +88,27 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header" id="header">
-      <div className="header-interactive">
-        <canvas id="interactiveCanvas"></canvas>
-      </div>
-      <div className="header-content text-center">
-        <h1 className="header-title">Welcome to My Portfolio</h1>
-        <p className="header-subtitle">Fullstack Developer | Open to Opportunities</p>
-      </div>
-    </header>
+<header className="header" id="header">
+  <div className="header-interactive">
+    <canvas id="interactiveCanvas"></canvas>
+  </div>
+  <div className="header-content text-center">
+    <h1 className="header-title text-success">Zoran Cvijic</h1>
+    <p className="header-subtitle">
+      <span className="text-danger">Professional Bachelor of Information Technology</span> | <span className="text-success">Open to Opportunities</span>
+    </p>
+    <Link 
+      to="about" 
+      smooth={true} 
+      duration={500} 
+      offset={-70} 
+      className="btn btn-success btn-lg mt-4 d-flex justify-content-center align-items-center"
+    >
+      About Me
+      <i className="fas fa-arrow-down ms-2"></i>
+    </Link>
+  </div>
+</header>
   );
 };
 
