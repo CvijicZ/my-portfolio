@@ -2,15 +2,40 @@
 <html lang="en">
 
 <head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6c99fefb-8a2d-4fc5-a684-32f8169f35b0" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6c99fefb-8a2d-4fc5-a684-32f8169f35b0"
+    data-blockingmode="auto" type="text/javascript"></script>
+  <!-- Cookiebot script for blocking YouTube embeds -->
+  <script type="text/javascript">
+    window.addEventListener("CookieConsentDeclaration", function () {
+      if (CookieConsent.consents.given && CookieConsent.consents.given.categories.includes('statistics')) {
+        // Load the iframe for YouTube only after consent
+        var iframe = document.querySelectorAll("iframe[data-cookieconsent=statistics]");
+        iframe.forEach(function (el) {
+          el.src = el.getAttribute("data-src");
+        });
+      }
+    });
+  </script>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SG46SSZX6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-6SG46SSZX6');
+  <script>
+
+    window.addEventListener("CookieConsentDeclaration", function () {
+      if (CookieConsent.consents.given && CookieConsent.consents.given.categories.includes('statistics')) {
+        // Load Google Analytics script dynamically
+        var script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-6SG46SSZX6";
+        document.head.appendChild(script);
+
+        script.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-6SG46SSZX6');
+        };
+      }
+    });
+
   </script>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -23,10 +48,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  rel="stylesheet"
-/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
