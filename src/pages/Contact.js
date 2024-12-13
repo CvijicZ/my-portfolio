@@ -11,7 +11,7 @@ const Contact = () => {
       }}
     >
       <div className="container text-center">
-        <h2 className="mb-4" style={{ fontSize: "2.5rem", fontWeight: "bold" }}>
+        <h2 className="mb-4 text-warning" style={{ fontSize: "2.5rem", fontWeight: "bold" }}>
           Contact Me
         </h2>
         <p className="mb-4" style={{ fontSize: "1.2rem", lineHeight: "1.6" }}>

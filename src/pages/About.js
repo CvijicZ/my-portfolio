@@ -19,9 +19,9 @@ const About = () => {
 
           {/* Text Section */}
           <div className="col-md-8">
-            <h2 className="text-light mb-4">About Me</h2>
+            <h2 className="text-warning mb-4">About Me</h2>
             <p className="text-light">
-              Hi! I'm <strong>Zoran Cvijic</strong>, an aspiring IT professional with a Professional Bachelor's degree in Information Technology from the Higher Technical School of Professional Studies in Novi Sad. My education has provided me with a strong foundation in various IT domains and sparked a deep passion for web development.
+              Hi! I'm <strong>Zoran Cvijic</strong>, IT professional with a Professional Bachelor's degree in Information Technology. My education has provided me with a strong foundation in various IT domains and sparked a deep passion for web development.
             </p>
             <p className="text-light">
               I specialize in crafting elegant and efficient web solutions using modern technologies, with a particular focus on PHP, which I consider my core strength. My expertise spans both frontend and backend development, enabling me to create seamless and interactive user experiences.
@@ -30,7 +30,7 @@ const About = () => {
               I thrive on solving complex challenges and bringing innovative ideas to life through code. Whether it's building dynamic interfaces, optimizing backend systems, or exploring cutting-edge technologies, I am committed to delivering high-quality solutions that make an impact.
             </p>
             <p className="text-success">
-              Let's connect and collaborate to turn ideas into reality!
+              Let's connect and collaborate to turn ideas into reality! <a href="#contact" className="btn btn-outline-success"> Contact me<i className="fas fa-arrow-down pl-4"></i></a>
             </p>
           </div>
         </div>

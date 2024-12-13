@@ -29,7 +29,7 @@ const Projects = () => {
   return (
     <div id="projects" className="bg-dark text-light py-5">
       <div className="container">
-        <h2 className="text-center mb-4">Projects</h2>
+        <h2 className="text-center text-warning mb-4">Projects</h2>
         <p className="text-center mb-5">
           Here are some of my recent projects. Click on the video to view the project in action.
         </p>
