@@ -4,39 +4,17 @@
 <head>
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6c99fefb-8a2d-4fc5-a684-32f8169f35b0"
     data-blockingmode="auto" type="text/javascript"></script>
-  <!-- Cookiebot script for blocking YouTube embeds -->
-  <script type="text/javascript">
-    window.addEventListener("CookieConsentDeclaration", function () {
-      if (CookieConsent.consents.given && CookieConsent.consents.given.categories.includes('statistics')) {
-        // Load the iframe for YouTube only after consent
-        var iframe = document.querySelectorAll("iframe[data-cookieconsent=statistics]");
-        iframe.forEach(function (el) {
-          el.src = el.getAttribute("data-src");
-        });
-      }
-    });
-  </script>
+
   <!-- Google tag (gtag.js) -->
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SG46SSZX6"></script>
   <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    window.addEventListener("CookieConsentDeclaration", function () {
-      if (CookieConsent.consents.given && CookieConsent.consents.given.categories.includes('statistics')) {
-        // Load Google Analytics script dynamically
-        var script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-6SG46SSZX6";
-        document.head.appendChild(script);
-
-        script.onload = function () {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'G-6SG46SSZX6');
-        };
-      }
-    });
-
+    gtag('config', 'G-6SG46SSZX6');
   </script>
+
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
